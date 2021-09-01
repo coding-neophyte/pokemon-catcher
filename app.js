@@ -31,7 +31,6 @@ renderNewPokemon();
 
 catchButton.addEventListener('click', () => {
     let pokemonSelected = document.querySelector('input:checked');
-    console.log(Number(pokemonSelected.value));
     catchPokemon(Number(pokemonSelected.value));
     renderNewPokemon();
 
