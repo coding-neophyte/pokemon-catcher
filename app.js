@@ -34,7 +34,7 @@ catchButton.addEventListener('click', () => {
     let pokemonSelected = document.querySelector('input:checked');
     catchPokemon(Number(pokemonSelected.value));
     renderNewPokemon();
-    if (pokeCaught > 10) {
+    if (pokeCaught === 10) {
         window.location = '../results/index.html';
     }
 });
