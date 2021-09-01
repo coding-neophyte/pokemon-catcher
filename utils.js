@@ -79,10 +79,11 @@ export function encounterPokemon(id) {
     console.log(id);
     const encounterArray = getPokedex();
     const hasBeenSeen = findById(encounterArray, id);
+    const pokemonName = findById(pokemonData, id);
     if (hasBeenSeen) {
         hasBeenSeen.seen++;
     } else {
-        const pokemonObject = { id: id, seen: 1, caught: 0 };
+        const pokemonObject = { id: id, seen: 1, caught: 0, name: pokemonName.pokemon };
         encounterArray.push(pokemonObject);
     }
     setPokedex(encounterArray);
@@ -94,11 +95,9 @@ export function encounterPokemon(id) {
 // - Increment the `caught` of this pokemon in local storage
 // - setPokedex
 export function catchPokemon(id) {
-    console.log(id);
+
     const catchEm = getPokedex();
-    console.log(catchEm);
-    const caughtEm = findById(catchEm, id);
-    console.log(caughtEm);
+    const caughtEm = findById(catchEm, Number(id));
     caughtEm.caught++;
 
     setPokedex(catchEm);

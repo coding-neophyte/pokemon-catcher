@@ -1,6 +1,6 @@
 // IMPORT MODULES under test here:
 // import { example } from '../example.js';
-import { encounterPokemon, getPokedex, getRandomPokemon, setPokedex } from '../utils.js';
+import { encounterPokemon, getPokedex, getRandomPokemon, setPokedex, catchPokemon } from '../utils.js';
 
 const test = QUnit.test;
 
@@ -21,7 +21,7 @@ test('should return random pokemon each time', (expect) => {
 });
 
 
-test('should determine if a pokemon has been encountered', (expect) => {
+test('should determine if a pokemon has been encountered and how many', (expect) => {
 
     const pokemon = [
         { seen: 0, caught: 1, id: 4 },

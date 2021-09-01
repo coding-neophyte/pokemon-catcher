@@ -23,15 +23,18 @@ import { renderNewPokemon } from './utils.js';
 // - now, if `pokeCaught > 10`, redirect to the results page
 // - call `renderNewPokemon()`
 
-
+let pokeCaught = 0;
 
 const catchButton = document.getElementById('catch');
 
 renderNewPokemon();
 
 catchButton.addEventListener('click', () => {
+    pokeCaught++;
     let pokemonSelected = document.querySelector('input:checked');
     catchPokemon(Number(pokemonSelected.value));
     renderNewPokemon();
-
+    if (pokeCaught > 10) {
+        window.location = '../results/index.html';
+    }
 });
