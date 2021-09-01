@@ -10,6 +10,8 @@ const pokemonNameArray = pokemonData.filter(poke => poke.caught > 0)
 const pokemonEncounteredArray = pokemonData.filter(poke => poke.seen > 0)
     .map(({ seen }) => seen);
 
+const backButton = document.getElementById('back-catcher');
+
 console.log(pokemonNameArray, pokemonCaughtArray);
 const ctx = document.getElementById('myChart');
 const myChart = new Chart(ctx, { // eslint-disable-line
@@ -66,4 +68,8 @@ const myChart = new Chart(ctx, { // eslint-disable-line
             }
         }
     }
+});
+
+backButton.addEventListener('click', () => {
+    window.location = '../index.html';
 });

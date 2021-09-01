@@ -148,3 +148,13 @@ h2{
     height: 500px;
     margin-left: 24%;
 }
+#catcher-button{
+    margin-left: 15%;
+}
+#poke-logo{
+    margin-top: 5px;
+    margin-right: 5px;
+}
+#catch-pokemon{
+    font-family: 'Press Start 2P', cursive;
+}
