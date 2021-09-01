@@ -26,6 +26,7 @@ import { renderNewPokemon } from './utils.js';
 let pokeCaught = 0;
 
 const catchButton = document.getElementById('catch');
+const resultsButton = document.getElementById('results');
 
 renderNewPokemon();
 
@@ -37,4 +38,8 @@ catchButton.addEventListener('click', () => {
     if (pokeCaught === 10) {
         window.location = '../results/index.html';
     }
+});
+
+resultsButton.addEventListener('click', () => {
+    window.location = '../results/index.html';
 });
