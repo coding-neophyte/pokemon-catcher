@@ -36,10 +36,10 @@ catchButton.addEventListener('click', () => {
     catchPokemon(Number(pokemonSelected.value));
     renderNewPokemon();
     if (pokeCaught === 10) {
-        window.location = '../results/index.html';
+        window.location = './results/index.html';
     }
 });
 
 resultsButton.addEventListener('click', () => {
-    window.location = '../results/index.html';
+    window.location = './results/index.html';
 });
